@@ -26,7 +26,7 @@ Gabriel
 ==
 
 = Before Starting!! =
-Please make sure your account is working, use the bank test page or go to Test-Case page... If test case is returning "Not Calculated - No 'SECURE_SECRET' present." 
+Please make sure your account is working, use the bank test page or go to Test-Case page... If test case is returning `"Not Calculated - No 'SECURE_SECRET' present."` 
 Please retry it on your bank test page if both gives this then contact the bank.
 (Small TIP) Ask the bank to run a test of your account...
 
@@ -88,7 +88,7 @@ The return url will be updated to the new page/post.
 = Example: How to add action hooks to this plugin? =
 This code can be added in functions.php in the theme folder.
 
-> function bank_transection_return($obj) {
+`function bank_transection_return($obj) {
     if ($obj->updated > 0){
         //When it comes here it means the product was successfully updated and paid.
         print_r($obj);
@@ -97,19 +97,19 @@ This code can be added in functions.php in the theme folder.
         echo "Did not update? ";
     }
 }
-add_action('migs_payment_gateway_update_on_return', 'bank_transection_return', 10 , 1);
+add_action('migs_payment_gateway_update_on_return', 'bank_transection_return', 10 , 1);`
 
 = List of filter hooks: =
 migs_payment_gateway_modify_button
     
 = How to add filter hooks to the plugin? =
 This code can be added in functions.php in the theme folder.
-> function migs_payment_gateway_modify_button_html( $html, $atts ) {
+`function migs_payment_gateway_modify_button_html( $html, $atts ) {
     //This filter you can change the buttons on the site
     //print_r($atts) Will return Array ( [amount] => 100 [text] => Buy new shoes ) 
     return '<div class="extra_div">' . $html . '</div>';
 }
-add_filter( 'migs_payment_gateway_modify_button', 'migs_payment_gateway_modify_button_html', 10, 2);
+add_filter( 'migs_payment_gateway_modify_button', 'migs_payment_gateway_modify_button_html', 10, 2);`
 
 == Installation ==
 You can download and install Migs payment gateway using the built in WordPress plugin installer. If you download Migs Payment Gateway manually, make sure it is uploaded to "/wp-content/plugins/migs_payment_gateway/".
@@ -129,7 +129,7 @@ Migs Payment Gateway introduces shortcodes.
 
 If you do want to work with shortcodes. 
 
-**<a href="http://www.yourwwwdesign.com/migs-payment-gateway/#shortcodes">Learn About Migs Payment Gateway Shortcodes</a>**
+**[Learn About Migs Payment Gateway Shortcodes](http://www.yourwwwdesign.com/migs-payment-gateway/#shortcodes "Learn About Migs Payment Gateway Shortcodes")**
 
 == Frequently Asked Questions ==
 
