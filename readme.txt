@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: Gabriel82
 Donate link: 
-Tags: migs banking gateway,Master card gateway, banks gateway, visa mastercard plugin, migs
+Tags: migs banking gateway,Master card gateway, banks gateway, visa mastercard plugin, migs, easy buttons, simple buttons payment, migs buttons
 Requires at least: 3.7.1
 Tested up to: 3.7.1
 Stable tag: 3.7.1
@@ -148,3 +148,5 @@ Yes, its based on shortcodes.
 == Changelog ==
 
 = 1.0 =
+* First version.
+
