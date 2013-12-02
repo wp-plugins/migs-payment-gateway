@@ -9,6 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
+
 Migs (Mastercard Internet Gateway Service) Payment Gateway gives you a chance to add Buy now buttons and create your own without coding knowledge, the plugin also has hooks and filters with reporting tools.
 
 Greetings everyone,
@@ -24,49 +25,49 @@ Gabriel
 
 ==
 
-> Before Starting!!
+= Before Starting!! =
 Please make sure your account is working, use the bank test page or go to Test-Case page... If test case is returning "Not Calculated - No 'SECURE_SECRET' present." 
 Please retry it on your bank test page if both gives this then contact the bank.
 (Small TIP) Ask the bank to run a test of your account...
 
-> How to add paying button to the website?
+= How to add paying button to the website? =
 To add a new button to the website you can add this button to any page/post:
-[my_migs_button amount="100"]
+`[my_migs_button amount="100"]`
 In php code:
 `do_shortcode('[my_migs_button amount="100"]')`
 
-> As you notice the default text is "Buy now" to change this:
-[my_migs_button amount="100" text="Buy new item!"]
+= As you notice the default text is "Buy now" to change this: =
+`[my_migs_button amount="100" text="Buy new item!"]`
 In php code:
 `do_shortcode('[my_migs_button amount="100" text="Buy new item!"]')`
 
-> To add a css class:
-[my_migs_button amount="100" cssclass="somecolors"]
+= To add a css class: =
+`[my_migs_button amount="100" cssclass="somecolors"]`
 In php code:
-do_shortcode('[my_migs_button amount="100" cssclass="somecolors"]')
+`do_shortcode('[my_migs_button amount="100" cssclass="somecolors"]')`
 
-> To add a predefined post id (This can be used):
-[my_migs_button amount="100" post_id="1"]
+= To add a predefined post id (This can be used): =
+`[my_migs_button amount="100" post_id="1"]`
 In php code:
 `do_shortcode('[my_migs_button amount="100" post_id="1"]')`
 
-> To show price in button:
-[my_migs_button amount="100" showprice="1"]
+= To show price in button: =
+`[my_migs_button amount="100" showprice="1"]`
 In php code:
 `do_shortcode('[my_migs_button amount="100" showprice="1"]')`
 
-> Show button for logged in only in users:
-[my_migs_button amount="100" loggedinonly="1"]
+= Show button for logged in only in users: =
+`[my_migs_button amount="100" loggedinonly="1"]`
 In php code:
 `do_shortcode('[my_migs_button amount="100" loggedinonly="1"]')`
 
-> The amount is required!!!
+= The amount is required!!! =
 For more advanced options with the button please use the "migs_payment_gateway_modify_button" filter.
 
-How to set a custom return url: (this is not obligatory)
+= How to set a custom return url: (this is not obligatory) =
 1- Create a new page/post (Depends on your needs and design).
-2- Paste this code in the page [my_migs_return_url]
-3- Copy the page ID to Settings page
+1- Paste this code in the page [my_migs_return_url]
+1- Copy the page ID to Settings page
 
 The return url will be updated to the new page/post.
 
@@ -84,10 +85,10 @@ The return url will be updated to the new page/post.
 * migs_payment_gateway_settings_updated
 * migs_payment_gateway_get_settings
 
-Example: How to add action hooks to this plugin?
+= Example: How to add action hooks to this plugin? =
 This code can be added in functions.php in the theme folder.
 
-function bank_transection_return($obj) {
+> function bank_transection_return($obj) {
     if ($obj->updated > 0){
         //When it comes here it means the product was successfully updated and paid.
         print_r($obj);
@@ -98,13 +99,12 @@ function bank_transection_return($obj) {
 }
 add_action('migs_payment_gateway_update_on_return', 'bank_transection_return', 10 , 1);
 
-> List of filter hooks:
+= List of filter hooks: =
 migs_payment_gateway_modify_button
     
-> How to add filter hooks to the plugin?
+= How to add filter hooks to the plugin? =
 This code can be added in functions.php in the theme folder.
-
-function migs_payment_gateway_modify_button_html( $html, $atts ) {
+> function migs_payment_gateway_modify_button_html( $html, $atts ) {
     //This filter you can change the buttons on the site
     //print_r($atts) Will return Array ( [amount] => 100 [text] => Buy new shoes ) 
     return '<div class="extra_div">' . $html . '</div>';
