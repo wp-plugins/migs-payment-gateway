@@ -5,7 +5,7 @@
   Plugin URI: http://www.yourwwwdesign.com/migs_payment_gateway/
   Description: Migs (Not Official) payment gateway.
   Version: 1.0
-  Author: Gabriel Ajabahian
+  Author: Gabriel82
   Author URI: http://www.yourwwwdesign.com/
   License: GPLv2
  */

@@ -1,5 +1,5 @@
 === Plugin Name ===
-Contributors: Migs Payment Gateway
+Contributors: Gabriel82
 Donate link: 
 Tags: migs banking gateway,Master card gateway, banks gateway, visa mastercard plugin, migs
 Requires at least: 3.7.1
