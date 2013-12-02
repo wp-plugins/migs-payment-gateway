@@ -24,43 +24,43 @@ Gabriel
 
 ==
 
-Before Starting!!
+> Before Starting!!
 Please make sure your account is working, use the bank test page or go to Test-Case page... If test case is returning "Not Calculated - No 'SECURE_SECRET' present." 
 Please retry it on your bank test page if both gives this then contact the bank.
 (Small TIP) Ask the bank to run a test of your account...
 
-How to add paying button to the website?
+> How to add paying button to the website?
 To add a new button to the website you can add this button to any page/post:
 [my_migs_button amount="100"]
 In php code:
-do_shortcode('[my_migs_button amount="100"]')
+`do_shortcode('[my_migs_button amount="100"]')`
 
-As you notice the default text is "Buy now" to change this:
+> As you notice the default text is "Buy now" to change this:
 [my_migs_button amount="100" text="Buy new item!"]
 In php code:
-do_shortcode('[my_migs_button amount="100" text="Buy new item!"]')
+`do_shortcode('[my_migs_button amount="100" text="Buy new item!"]')`
 
-To add a css class:
+> To add a css class:
 [my_migs_button amount="100" cssclass="somecolors"]
 In php code:
 do_shortcode('[my_migs_button amount="100" cssclass="somecolors"]')
 
-To add a predefined post id (This can be used):
+> To add a predefined post id (This can be used):
 [my_migs_button amount="100" post_id="1"]
 In php code:
-do_shortcode('[my_migs_button amount="100" post_id="1"]')
+`do_shortcode('[my_migs_button amount="100" post_id="1"]')`
 
-To show price in button:
+> To show price in button:
 [my_migs_button amount="100" showprice="1"]
 In php code:
-do_shortcode('[my_migs_button amount="100" showprice="1"]')
+`do_shortcode('[my_migs_button amount="100" showprice="1"]')`
 
-Show button for logged in only in users:
+> Show button for logged in only in users:
 [my_migs_button amount="100" loggedinonly="1"]
 In php code:
-do_shortcode('[my_migs_button amount="100" loggedinonly="1"]')
+`do_shortcode('[my_migs_button amount="100" loggedinonly="1"]')`
 
-The amount is required!!!
+> The amount is required!!!
 For more advanced options with the button please use the "migs_payment_gateway_modify_button" filter.
 
 How to set a custom return url: (this is not obligatory)
@@ -70,19 +70,19 @@ How to set a custom return url: (this is not obligatory)
 
 The return url will be updated to the new page/post.
 
-List of action hooks:
-migs_payment_gateway_update_on_return
-migs_payment_gateway_send_admin_email
-migs_payment_gateway_insert_to_logs
-migs_payment_gateway_settings_updated
-migs_payment_gateway_get_settings
+= List of action hooks: =
+* migs_payment_gateway_update_on_return
+* migs_payment_gateway_send_admin_email
+* migs_payment_gateway_insert_to_logs
+* migs_payment_gateway_settings_updated
+* migs_payment_gateway_get_settings
 
-List of action hooks:
-migs_payment_gateway_update_on_return
-migs_payment_gateway_send_admin_email
-migs_payment_gateway_insert_to_logs
-migs_payment_gateway_settings_updated
-migs_payment_gateway_get_settings
+= List of action hooks: =
+* migs_payment_gateway_update_on_return
+* migs_payment_gateway_send_admin_email
+* migs_payment_gateway_insert_to_logs
+* migs_payment_gateway_settings_updated
+* migs_payment_gateway_get_settings
 
 Example: How to add action hooks to this plugin?
 This code can be added in functions.php in the theme folder.
@@ -98,10 +98,10 @@ function bank_transection_return($obj) {
 }
 add_action('migs_payment_gateway_update_on_return', 'bank_transection_return', 10 , 1);
 
-List of filter hooks:
+> List of filter hooks:
 migs_payment_gateway_modify_button
     
-How to add filter hooks to the plugin?
+> How to add filter hooks to the plugin?
 This code can be added in functions.php in the theme folder.
 
 function migs_payment_gateway_modify_button_html( $html, $atts ) {
@@ -118,10 +118,10 @@ Activate Migs payment gateway in the "Plugins" admin panel using the "Activate" 
 
 == Screenshots ==
 
-1. MigsPaymentGateway Check transactions
-2. MigsPaymentGateway Settings
-3. MigsPaymentGateway Shortcode
-4. MigsPaymentGateway Test-Case
+1. This page in exists in wp-admin, Check transactions allows you to see every transaction made on your website.
+2. Changing the settings of the Migs payment.
+3. How to add shortcodes easily from the text editor.
+4. Test your account.
 
 == Shortcode ==
 
