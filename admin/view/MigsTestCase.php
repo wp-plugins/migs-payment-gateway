@@ -136,20 +136,20 @@ if (isset($_GET['vpc_TxnResponseCode'])) {
     }
     //the the fields passed from the url to be displayed
     $amount = null2unknown(addslashes($_GET["amount"]) / 100);
-    $locale = null2unknown(addslashes($_GET["vpc_Locale"]));
-    $batchNo = null2unknown(addslashes($_GET["vpc_BatchNo"]));
-    $command = null2unknown(addslashes($_GET["vpc_Command"]));
-    $message = null2unknown(addslashes($_GET["vpc_Message"]));
-    $version = null2unknown(addslashes($_GET["vpc_Version"]));
-    $cardType = null2unknown(addslashes($_GET["vpc_Card"]));
-    $orderInfo = null2unknown(addslashes($_GET["orderInfo"]));
-    $receiptNo = null2unknown(addslashes($_GET["vpc_ReceiptNo"]));
-    $merchantID = null2unknown(addslashes($_GET["merchant"]));
-    $authorizeID = null2unknown(addslashes($_GET["vpc_AuthorizeId"]));
-    $merchTxnRef = null2unknown(addslashes($_GET["merchTxnRef"]));
-    $transactionNo = null2unknown(addslashes($_GET["vpc_TransactionNo"]));
-    $acqResponseCode = null2unknown(addslashes($_GET["vpc_AcqResponseCode"]));
-    $txnResponseCode = null2unknown(addslashes($_GET["vpc_TxnResponseCode"]));
+    $locale = null2unknown(addslashes(knownGetKeyValue("vpc_Locale")));
+    $batchNo = null2unknown(addslashes(knownGetKeyValue("vpc_BatchNo")));
+    $command = null2unknown(addslashes(knownGetKeyValue("vpc_Command")));
+    $message = null2unknown(addslashes(knownGetKeyValue("vpc_Message")));
+    $version = null2unknown(addslashes(knownGetKeyValue("vpc_Version")));
+    $cardType = null2unknown(addslashes(knownGetKeyValue("vpc_Card")));
+    $orderInfo = null2unknown(addslashes(knownGetKeyValue("orderInfo")));
+    $receiptNo = null2unknown(addslashes(knownGetKeyValue("vpc_ReceiptNo")));
+    $merchantID = null2unknown(addslashes(knownGetKeyValue("merchant")));
+    $authorizeID = null2unknown(addslashes(knownGetKeyValue("vpc_AuthorizeId")));
+    $merchTxnRef = null2unknown(addslashes(knownGetKeyValue("merchTxnRef")));
+    $transactionNo = null2unknown(addslashes(knownGetKeyValue("vpc_TransactionNo")));
+    $acqResponseCode = null2unknown(addslashes(knownGetKeyValue("vpc_AcqResponseCode")));
+    $txnResponseCode = null2unknown(addslashes(knownGetKeyValue("vpc_TxnResponseCode")));
 
     // Show 'Error' in title if an error condition
     $errorTxt = "";

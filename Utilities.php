@@ -20,11 +20,13 @@ class MigsUtilities {
         }
         return $output;
     }
-    public static function userCanEdit($user = ''){
+
+    public static function userCanEdit($user = '') {
         if ($user == '')
             $user = wp_get_current_user();
         return user_can($user, 'manage_options');
     }
+
     public static function getEncUtility($post_id, $amount, $bs) {
         $t = time();
         $encUtil = new stdClass();
@@ -258,7 +260,7 @@ class MigsUtilities {
         echo "<script language=\"javascript\">top.location.href='$migs_url$newHash'</script>";
     }
 
-    function getMigsPaymentGatewayPostFromMerchantId($merchTxnRef) {
+    public static function getMigsPaymentGatewayPostFromMerchantId($merchTxnRef) {
         $pieces = explode("-", $merchTxnRef);
         return intval($pieces[0]);
     }
@@ -284,6 +286,18 @@ if (!function_exists('null2unknown')) {
             return "No Value Returned";
         else
             return $data;
+    }
+
+}
+
+if (!function_exists('knownGetKeyValue')) {
+
+    function knownGetKeyValue($key) {
+        /* @var $GET type */
+        if (isset($GET[$key])) {
+            return $GET[$key];
+        }
+        return "";
     }
 
 }

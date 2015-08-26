@@ -180,6 +180,9 @@ function get_migs_payment_gateway_button($atts) {
     $myBankButton = apply_filters(MyConstants::PREFIX . '_modify_button', $htmlButton, $atts);
 
     $encUtil = MigsUtilities::getEncUtility($post_id, $amount, $bs);
+	if (!isset($t)) {
+		$t = "migs_form";
+	}
     $form = '<form id="' . $t . '" name="' . MyConstants::PREFIX . '_' . $t . '" method="post">'
             . $myBankButton
             . '<input type="hidden" name="merchant" value="' . $bs->merchant . '" />'

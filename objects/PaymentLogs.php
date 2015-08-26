@@ -74,7 +74,7 @@ class MigsPaymentGatewayPaymentLogs {
         return $mypayment;
     }
     
-    function getPaymentLogsCharts($paid) {
+    public static function getPaymentLogsCharts($paid) {
         global $wpdb;
         $myrows = $wpdb->get_results("SELECT MONTHNAME(dateoforder) AS month, CONCAT('".MigsPaymentGatewaySettings::getCurrency()."', FORMAT(SUM(amount), 2)) AS monthsum
         FROM `" . $wpdb->prefix . self::table_name . "`

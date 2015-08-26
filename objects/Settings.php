@@ -22,6 +22,8 @@ class MigsPaymentGatewaySettings {
     var $currency = "$";
 
     function updateSettings() {
+        MigsPaymentGatewaySettings::checkSaltLenght(strlen($this->salt_1), "Salt 1");
+        MigsPaymentGatewaySettings::checkSaltLenght(strlen($this->salt_2), "Salt 2");
         update_option(MyConstants::PREFIX . "_url", $this->url);
         update_option(MyConstants::PREFIX . "_secure_secret", $this->secure_secret);
         update_option(MyConstants::PREFIX . "_accesscode", $this->accesscode);
@@ -63,7 +65,15 @@ class MigsPaymentGatewaySettings {
         }
         return $permalinks;
     }
-
+	
+	function checkSaltLenght($value, $name){
+		$allowed = array(16, 24, 32);
+		if (!in_array(strlen($this->salt_1), $allowed)) {
+			echo $name . " length must be 16 or 32 or 64";
+			die();
+		}
+	}
+	
     function getDefaultConfigPermalinks() {
         return get_option("siteurl") . "/?action=py";
     }

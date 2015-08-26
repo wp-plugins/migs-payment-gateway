@@ -2,11 +2,11 @@
 
 /*
   Plugin Name: Migs Payment Gateway
-  Plugin URI: http://www.yourwwwdesign.com/migs_payment_gateway/
+  Plugin URI: https://www.openprogrammer.info/2012/01/01/migs-payment-gateway/
   Description: Migs (Not Official) payment gateway.
-  Version: 1.0
+  Version: 1.1
   Author: Gabriel82
-  Author URI: http://www.yourwwwdesign.com/
+  Author URI: http://www.openprogrammer.info/
   License: GPLv2
  */
 $wp_rewrite = new WP_Rewrite();

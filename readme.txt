@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: Gabriel82
 Donate link: 
-Tags: migs banking gateway,Master card gateway, banks gateway, visa mastercard plugin, migs, easy buttons, simple buttons payment, migs buttons
+Tags: migs banking gateway, Master card gateway, banks gateway, Visa mastercard plugin, migs, easy buttons, simple buttons payment, migs buttons
 Requires at least: 3.7.1
-Tested up to: 3.7.1
-Stable tag: 3.7.1
+Tested up to: 4.1
+Stable tag: 4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -146,6 +146,11 @@ Yes, you just have to use this action: add_action('migs_payment_gateway_update_o
 Yes, its based on shortcodes.
 
 == Changelog ==
+
+= 1.1 =
+* cleared undefined variables.
+* Added validation to Salts
+* Cleared strict errors
 
 = 1.0 =
 * First version.
